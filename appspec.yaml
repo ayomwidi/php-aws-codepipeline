@@ -5,11 +5,7 @@ files:
     destination: /var/www/html
     overwrite: true
 hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
-  AfterInstall:
+BeforeInstall:
     - location: scripts/install_composer_dependencies.sh
       timeout: 300
       runas: root
